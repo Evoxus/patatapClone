@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Learning paper js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+  <script src="assets/js/lib/dist/paper-full.js"></script>
+  <script type="text/paperscript" canvas="myCanvas">
+    for(var x = 20; x <= 1920; x += 100){
+      for(var y = 20; y <= 1920; y += 100){
+        // var myCircle = new Path.Circle(new Point (x, y), 20);
+        // myCircle.fillColor = 'green';
+        var rectangle = new Rectangle(new Point(x, y), new Point((x + 50), (y + 20)));
+        new Path.Rectangle(rectangle).fillColor = 'green';
+        // path.selected = true;
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" resize="true"></canvas>
+</body>
+</html>
